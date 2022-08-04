@@ -1,0 +1,1 @@
+select t1.employee_ID, t1.name from (select employee_ID, name from employee_information where division = 'HR') as t1 left join last_quarter_bonus as t2 on t1.employee_ID = t2.employee_ID where t2.bonus >= 5000;
